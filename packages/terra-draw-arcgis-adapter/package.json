@@ -7,8 +7,8 @@
 		"@arcgis/core": "^4.31.6"
 	},
 	"scripts": {
-		"release": "commit-and-tag-version .versionrc.cjs -t terra-draw-arcgis-adapter@",
-		"release:dryrun": "commit-and-tag-version .versionrc.cjs -t terra-draw-arcgis-adapter@ --dry-run",
+		"release": "TYPE=$(node ./bump.mjs) && commit-and-tag-version .versionrc.cjs -t terra-draw-arcgis-adapter@ --release-as $TYPE",
+		"release:dryrun": "TYPE=$(node ./bump.mjs) && commit-and-tag-version .versionrc.cjs -t terra-draw-arcgis-adapter@ --dry-run --release-as $TYPE",
 		"build": "microbundle",
 		"watch": "microbundle --watch --format modern",
 		"unused": "knip",

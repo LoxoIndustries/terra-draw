@@ -7,8 +7,8 @@
 		"leaflet": "^1.9.4"
 	},
 	"scripts": {
-		"release": "commit-and-tag-version .versionrc.cjs -t terra-draw-leaflet-adapter@",
-		"release:dryrun": "commit-and-tag-version .versionrc.cjs -t terra-draw-leaflet-adapter@ --dry-run",
+		"release": "TYPE=$(node ./bump.mjs) && commit-and-tag-version .versionrc.cjs -t terra-draw-leaflet-adapter@ --release-as $TYPE",
+		"release:dryrun": "TYPE=$(node ./bump.mjs) && commit-and-tag-version .versionrc.cjs -t terra-draw-leaflet-adapter@ --dry-run --release-as $TYPE",
 		"build": "microbundle",
 		"watch": "microbundle --watch --format modern",
 		"unused": "knip",
