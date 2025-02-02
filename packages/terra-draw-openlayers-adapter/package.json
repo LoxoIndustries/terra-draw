@@ -7,8 +7,8 @@
 		"ol": "^10.3.1"
 	},
 	"scripts": {
-		"release": "commit-and-tag-version .versionrc.cjs -t terra-draw-openlayers-adapter@",
-		"release:dryrun": "commit-and-tag-version .versionrc.cjs -t terra-draw-openlayers-adapter@ --dry-run",
+		"release": "TYPE=$(node ./bump.mjs) && commit-and-tag-version .versionrc.cjs -t terra-draw-openlayers-adapter@ --release-as $TYPE",
+		"release:dryrun": "TYPE=$(node ./bump.mjs) && commit-and-tag-version .versionrc.cjs -t terra-draw-openlayers-adapter@ --dry-run --release-as $TYPE",
 		"build": "microbundle",
 		"watch": "microbundle --watch --format modern",
 		"unused": "knip",
