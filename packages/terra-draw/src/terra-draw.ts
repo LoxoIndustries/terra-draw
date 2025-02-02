@@ -771,14 +771,20 @@ export {
 	// Types that are required for 3rd party developers to extend
 	TerraDrawExtend,
 
-	// TerraDrawBaseMode
+	// Basic types that appear in the public API
 	BehaviorConfig,
+	FeatureId,
 	GeoJSONStoreFeatures,
 	GeoJSONStoreGeometries,
 	HexColor,
-	TerraDrawMouseEvent,
+	IdStrategy,
 	TerraDrawAdapterStyling,
+	TerraDrawBaseDrawMode,
+	TerraDrawBaseSelectMode,
+	TerraDrawEventListeners,
+	TerraDrawEvents,
 	TerraDrawKeyboardEvent,
+	TerraDrawMouseEvent,
 
 	// TerraDrawBaseAdapter
 	TerraDrawChanges,
